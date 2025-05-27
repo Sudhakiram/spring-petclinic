@@ -15,6 +15,13 @@ pipeline {
                 sh "./mvnw install"
                 sh "ls -lrt target/*.jar"
             }
+        
         }
+        stage("Test"){
+            steps {
+                sh "./mvnw test"
+            }
+        }
+
     }
 }
