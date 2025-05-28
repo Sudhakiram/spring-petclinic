@@ -8,7 +8,7 @@ pipeline {
                 sh "./mvnw install"
             }
         }
-        stage("Run unit-test"){
+        stage("Run unit-tests"){
             steps {
                 sh "./mvnw test"
             }
