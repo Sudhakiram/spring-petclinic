@@ -8,11 +8,12 @@ pipeline {
                 sh "./mvnw install"
             }
         }
-        stage("Run unit-tests"){
+        stage("Run unit tests"){
             steps {
                 sh "./mvnw test"
             }
-        }stage("Run Code Analysis"){
+        }
+        stage("Run Code Analysis"){
             environment {
                 SCANNER_HOME = tool 'sonar-scan'
             }
